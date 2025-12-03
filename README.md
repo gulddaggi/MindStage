@@ -1,6 +1,5 @@
 # MindStage
 ![버전](https://img.shields.io/badge/version-1.2.0-blue?style=flat-square)
-![라이선스](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
 MindStage는 VR 면접과 AI 평가를 결합한 몰입형 인터뷰 훈련 서비스입니다. 실제 채용 환경을 재현한 VR 씬과 실시간 AI 코치가 질문 생성, 음성 분석, 피드백 리포트를 담당합니다.
 
