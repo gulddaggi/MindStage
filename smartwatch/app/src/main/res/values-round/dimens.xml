@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- 원형 화면에서 모서리 클리핑을 피하기 위한 여백 -->
+	<dimen name="wear_inset">20dp</dimen>
+</resources>
+
+

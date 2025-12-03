@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "798797091922",
+    "project_id": "mindstage-da4f1",
+    "storage_bucket": "mindstage-da4f1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798797091922:android:6be4d54d5949118091bb8b",
+        "android_client_info": {
+          "package_name": "com.example.mindstagewatch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7aichS4wjpxAu5wbGBjw8jzFAnJMc9kc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

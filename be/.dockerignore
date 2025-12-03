@@ -1,0 +1,20 @@
+.git
+.gitignore
+
+# Gradle build cache/output
+.gradle
+build
+out
+
+# IDE stuff
+*.iml
+*.ipr
+*.iws
+.idea
+
+# OS noise
+.DS_Store
+
+# logs
+*.log
+logs

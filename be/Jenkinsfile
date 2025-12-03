@@ -1,0 +1,83 @@
+pipeline {
+    agent any
+
+    environment {
+        TZ = "Asia/Seoul"
+        SRV_DIR = "/srv"
+        BE_DIR = "/workspace/backend/be"
+    }
+
+    options {
+        timestamps()
+    }
+
+    stages {
+
+        stage('Detect changes in be/') {
+            steps {
+                script {
+                    def changed = true
+
+                    if (currentBuild.rawBuild.getPreviousBuild() != null) {
+                        def diffOutput = sh(
+                            script: """
+                                git fetch origin develop
+                                git diff --name-only HEAD~1 HEAD | grep '^be/' || true
+                            """,
+                            returnStdout: true
+                        ).trim()
+
+                        if (diffOutput == "") {
+                            changed = false
+                        }
+                    }
+
+                    if (!changed) {
+                        echo "✅ be/ 디렉토리 내 변경 없음. 빌드/배포 작업 스킵."
+                        currentBuild.result = 'SUCCESS'
+                        error("NO_CHANGE_IN_BE")
+                    } else {
+                        echo "🔄 be/ 디렉토리 변경 감지. 빌드 계속 진행."
+                    }
+                }
+            }
+        }
+
+        stage('Gradle build (bootJar)') {
+            steps {
+                sh """
+                cd ${BE_DIR}
+                chmod +x gradlew
+                ./gradlew clean bootJar --no-daemon
+                """
+            }
+        }
+
+        stage('Docker build via compose') {
+            steps {
+                sh """
+                cd ${SRV_DIR}
+                docker compose build spring
+                """
+            }
+        }
+
+        stage('Deploy container') {
+            steps {
+                sh """
+                cd ${SRV_DIR}
+                docker compose up -d spring
+                """
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "🚀 배포 완료 (또는 변경 없음으로 정상 종료)"
+        }
+        failure {
+            echo "❌ 배포 실패. 'docker logs spring' 으로 애플리케이션 로그 확인 필요."
+        }
+    }
+}

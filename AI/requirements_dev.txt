@@ -1,0 +1,24 @@
+# Development dependencies
+# Install with: pip install -r requirements.txt -r requirements_dev.txt
+
+# Testing & Debugging
+pytest>=7.4.0,<8.0.0
+llama-cpp-python>=0.2.0
+compressed-tensors>=0.5.0
+accelerate>=0.20.0
+bitsandbytes>=0.39.0
+optimum>=1.10.0
+
+# Jupyter & Interactive Development
+jupyterlab>=4.0.0
+notebook>=7.0.0
+jupyterlab_widgets>=3.0.0
+ipywidgets>=8.0.0
+
+# Data Analysis & Visualization
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.13.0
+
+# All production dependencies
+-r requirements.txt

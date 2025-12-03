@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">mindstagewatch</string>
+    <string name="fgs_health_desc">Collect heart rate during an interview and send it securely.</string>
+</resources>

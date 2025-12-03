@@ -1,0 +1,193 @@
+############################################
+# 공통(운영체제/에디터/로그)
+############################################
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE/Editor
+.idea/
+.vscode/
+.vs/
+*.iml
+
+# Logs & temps
+*.log
+logs/
+*.swp
+*~
+
+# 환경 변수(샘플은 남김)
+.env
+.env.*
+*.env
+!.env.example
+!.env.*.example
+
+############################################
+# Unity (VR / Meta Quest 포함)
+############################################
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+[Uu]ser[Ss]ettings/
+sysinfo.txt
+
+# Rider/VS 생성물
+*.csproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.pdb
+*.mdb
+*.svd
+*.stackdump
+
+# Addressables(필요시 경로 맞춰 사용)
+[Aa]sset[Bb]undles/
+aa/*
+!/aa/README*
+
+ServerData/
+Assets/StreamingAssets/aa/
+**/cache/
+**/_cache/
+*.bak
+*.tmp
+
+############################################
+# Android/Kotlin (Wear OS 포함)
+############################################
+# Gradle/빌드 캐시
+.gradle/
+**/.gradle/
+**/build/
+**/.cxx/
+**/.externalNativeBuild/
+
+# 로컬 설정/서명키
+local.properties
+*.jks
+*.keystore
+keystore.properties
+
+# 산출물
+*.apk
+*.ap_
+*.aab
+
+# IntelliJ/Android Studio
+*.iws
+*.ipr
+captures/
+
+############################################
+# Spring Boot (Java, Gradle 사용)
+############################################
+# Gradle(모노레포 전역)
+.gradle/
+**/.gradle/
+**/build/
+out/
+
+# Gradle Wrapper(커밋 유지)
+!gradlew
+!gradlew.bat
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Eclipse 등
+.classpath
+.project
+.settings/
+.factorypath
+
+# 애플리케이션 설정(YAML) - 비밀 보호용
+**/application.yml
+**/application.yaml
+**/application-*.yml
+**/application-*.yaml
+
+# 예시 파일은 커밋 유지(팀 온보딩용)
+!**/application.example.yml
+!**/application-*.example.yml
+
+############################################
+# Python (AI)
+############################################
+__pycache__/
+*.py[cod]
+*$py.class
+aihubshell
+
+# 가상환경
+.venv/
+venv/
+ENV/
+env/
+aienv/
+
+# 패키징/배포
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# 테스트/정적분석/커버리지
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.cache/
+
+# 노트북
+.ipynb_checkpoints/
+
+############################################
+# 데이터/모델(대용량 산출물 예시)
+############################################
+data/raw/
+data/interim/
+data/processed/
+checkpoints/
+runs/
+*.pt
+*.pth
+*.onnx
+*.ckpt
+*.h5
+
+*.csv
+*.wav
+*.zip
+
+############################################
+# 데이터/모델(대용량 산출물 예시)
+############################################
+kobert_emotion_model/
+kobert_emotion_model/
+kobert_intent_multilabel_model/
+csv_collection/
+/model_test/
+Code/
+ai/model_test/mistral-7b-instruct-v0.1.Q4_K_M.gguf
+ai/model_test/qwen2.5-7b-instruct-q4_k_m-00001-of-00002.gguf
+ai/model_test/qwen2.5-7b-instruct-q4_k_m-00002-of-00002.gguf
+
+model_test/
+
+########################################### 
+# 데이터셋
+015.감성_및_발화_스타일별_음성합성_데이터/
